@@ -1,0 +1,73 @@
+{
+  "name": "khalfan",
+  "productName": "Khalfan",
+  "version": "1.2.0",
+  "description": "Khalfan, an Omani pixel boy who lives on your Windows desktop",
+  "main": "main.js",
+  "private": true,
+  "author": "Ahmed Al Araimi",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ahmed-Al-Araimi/khalfan.git"
+  },
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win --publish never"
+  },
+  "dependencies": {
+    "koffi": "3.3.3",
+    "electron-updater": "6.8.11"
+  },
+  "devDependencies": {
+    "electron": "40.9.3",
+    "electron-builder": "26.18.0"
+  },
+  "build": {
+    "appId": "com.ahmedalaraimi.khalfan",
+    "productName": "Khalfan",
+    "copyright": "© 2026 Ahmed Al Araimi",
+    "files": [
+      "main.js",
+      "preload.js",
+      "win32.js",
+      "icons.js",
+      "rage-shot.js",
+      "updater.js",
+      "khalfan.ico",
+      "khalfan.png",
+      "app/**",
+      "playroom/**",
+      "package.json",
+      "LICENSE.md"
+    ],
+    "npmRebuild": false,
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "build/icon.png"
+    },
+    "nsis": {
+      "oneClick": true,
+      "perMachine": false,
+      "runAfterFinish": true,
+      "shortcutName": "Khalfan",
+      "artifactName": "Khalfan-Setup.${ext}",
+      "deleteAppDataOnUninstall": false
+    },
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "Ahmed-Al-Araimi",
+        "repo": "khalfan",
+        "releaseType": "release"
+      }
+    ]
+  }
+}

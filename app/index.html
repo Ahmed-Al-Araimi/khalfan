@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Khalfan</title>
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: blob:; media-src 'self' data: blob:; connect-src 'self' data: blob:">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alexandria:wght@700;800&display=swap">
+<style>
+  html, body { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; background: transparent; }
+  canvas { position: fixed; inset: 0; width: 100%; height: 100%; display: block; }
+  body.review { background: #20242c; }
+</style>
+</head>
+<body>
+<canvas id="stage"></canvas>
+<!-- Khalfan's rig and his data come from the playroom, by reference: one Khalfan everywhere -->
+<script charset="utf-8" src="../playroom/js/rig.js"></script>
+<script charset="utf-8" src="../playroom/data/khalfan-data.js"></script>
+<!-- the game's newer pieces, by reference too: his angry power-up, the Flying Nimbus and its pictures -->
+<script charset="utf-8" src="../playroom/data/khalfan-emote-angry.js"></script>
+<script charset="utf-8" src="../playroom/data/khalfan-nimbus.js"></script>
+<script charset="utf-8" src="../playroom/js/nimbus.js"></script>
+<!-- his hairstyle drawings: a full head of curls while his kumma is off -->
+<script charset="utf-8" src="../playroom/data/khalfan-hairs.js"></script>
+<script charset="utf-8" src="../playroom/js/hair.js"></script>
+<!-- his speech bubbles, in pixels: the game's drawing, by reference -->
+<script charset="utf-8" src="../playroom/js/bubble.js"></script>
+<!-- his ultra rage's window burn, in its four looks (burn-fx.js), ahead of him -->
+<script charset="utf-8" src="burn-fx.js"></script>
+<script charset="utf-8" src="pet.js"></script>
+<!-- a file dragged onto him is never opened in his window -->
+<script charset="utf-8" src="no-drop.js"></script>
+</body>
+</html>
